@@ -6,13 +6,7 @@ const services = [
 
 const Arrow = () => <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg>;
 const Bolt = () => <svg viewBox="0 0 36 52" aria-hidden="true"><path d="M22 0 2 30h13L11 52l23-31H21L22 0Z"/></svg>;
-const Mail = () => <svg viewBox="0 0 32 28" aria-hidden="true">
-  <rect x="3.5" y="6" width="25" height="16" rx="1.5"/>
-  <path d="m4.5 7.5 11.5 8 11.5-8"/>
-  <rect className="mail-at-bg" x="9" y="11.3" width="15" height="9.4" rx="1"/>
-  <path className="mail-speed" d="M9.8 14.2h4.1M8.2 16.2h5.1M10.4 18.2h3.5"/>
-  <text x="18.7" y="19">@</text>
-</svg>;
+const Mail = () => <svg viewBox="0 0 28 28" aria-hidden="true"><rect x="3.5" y="6" width="21" height="16" rx="1.5"/><path d="m4.5 7.5 9.5 8 9.5-8"/><rect className="mail-at-bg" x="9.2" y="11.5" width="9.6" height="9" rx="1"/><text x="14" y="19">@</text></svg>;
 
 export default function Home() {
   return <main>
@@ -34,7 +28,7 @@ export default function Home() {
         <div className="hero-visual">
           <img src="/assets/electrical-work.webp" alt="Elektrikilbi ühendused ja kaablid"/>
           <div className="shade"/>
-          <div className="badge"><span>Kogemus</span><small>aastast</small><strong>2013</strong></div>
+          <div className="badge"><span>Alates</span><strong>2013</strong><small>Saaremaal</small></div>
         </div>
       </div>
       <div className="hero-footer shell">
