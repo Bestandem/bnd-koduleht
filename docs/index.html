@@ -127,6 +127,25 @@
     </div>
   </div>
   <script>
+    const pageStartsUnlocked = window.location.hash && window.location.hash !== "#avaleht";
+    if (!pageStartsUnlocked) {
+      document.documentElement.classList.add("landing-locked");
+      document.body.classList.add("landing-locked");
+    }
+    const navigateToSection = (event) => {
+      event.preventDefault();
+      const sectionId = event.currentTarget.getAttribute("href").slice(1);
+      document.documentElement.classList.remove("landing-locked");
+      document.body.classList.remove("landing-locked");
+      window.history.replaceState(null, "", `#${sectionId}`);
+      requestAnimationFrame(() => requestAnimationFrame(() => {
+        document.getElementById(sectionId)?.scrollIntoView({ behavior: "smooth", block: "start" });
+      }));
+    };
+    document.querySelectorAll('nav a[href^="#"], .text-link[href="#teenused"]').forEach((link) => {
+      link.addEventListener("click", navigateToSection);
+    });
+
     const overlay = document.querySelector(".letter-overlay");
     const dialog = document.querySelector(".letter-dialog");
     const form = dialog.querySelector("form");
