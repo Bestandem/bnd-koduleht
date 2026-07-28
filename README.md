@@ -8,7 +8,7 @@ GitHub Pagesi aadress:
 
 https://bestandem.github.io/bnd-koduleht/
 
-Testversioon avaldatakse automaatselt iga kord, kui `main` harusse jõuab uus muudatus.
+Testversioon avaldatakse automaatselt iga kord, kui `main` harusse jõuab uus muudatus. GitHub Pagesi automaatne avaldamine on aktiveeritud.
 
 ## Kohalik käivitamine
 
