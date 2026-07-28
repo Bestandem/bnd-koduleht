@@ -27,3 +27,4 @@ Seejärel ava terminalis kuvatud kohalik aadress.
 - `app/globals.css` – kujundus ja mobiilivaade
 - `public/assets/` – logo, pilt ja kirjafailid
 - `docs/` – GitHub Pagesi staatiline testversioon
+
