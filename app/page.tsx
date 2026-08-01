@@ -26,7 +26,7 @@ export default function Home() {
           </div>
         </div>
         <div className="hero-visual">
-          <img src="/assets/electrical-work.webp" alt="Elektrikilbi ühendused ja kaablid"/>
+          <img src="/assets/hero-competences.png" alt="Bestandem kompetentside abstraktne visuaal"/>
           <div className="shade"/>
           <div className="badge"><span>Alates</span><strong>2013</strong><small>Saaremaal</small></div>
         </div>
