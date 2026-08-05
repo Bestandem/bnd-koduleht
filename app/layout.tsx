@@ -13,8 +13,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Starter Project",
-  description: "A clean starting point for building your site.",
+  title: "Bestandem | Elektrisüsteemide terviklahendused",
+  description: "Elektri-, automaatika- ja nõrkvoolusüsteemide terviklahendused.",
   other: {
     "codex-preview": "development",
   },
@@ -30,7 +30,38 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="et">
+      <head>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              (() => {
+                const key = "bnd-home-transition-down";
+
+                document.addEventListener("click", (event) => {
+                  const target = event.target;
+                  if (target instanceof Element && target.closest('[data-home-transition="down"]')) {
+                    sessionStorage.setItem(key, "1");
+                  }
+                }, true);
+
+                window.addEventListener("pageswap", (event) => {
+                  if (sessionStorage.getItem(key) === "1" && event.viewTransition) {
+                    event.viewTransition.types.add("home-down");
+                  }
+                });
+
+                window.addEventListener("pagereveal", (event) => {
+                  if (sessionStorage.getItem(key) === "1") {
+                    if (event.viewTransition) event.viewTransition.types.add("home-down");
+                    sessionStorage.removeItem(key);
+                  }
+                });
+              })();
+            `,
+          }}
+        />
+      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
